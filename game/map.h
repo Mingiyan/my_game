@@ -1,6 +1,6 @@
-#include <SFML\Graphics.hpp>
-const int HEIGHT_MAP = 25;//размер карты высота
-const int WIDTH_MAP = 40;//размер карты ширина 
+п»ї#include <SFML\Graphics.hpp>
+const int HEIGHT_MAP = 25;//СЂР°Р·РјРµСЂ РєР°СЂС‚С‹ РІС‹СЃРѕС‚Р°
+const int WIDTH_MAP = 40;//СЂР°Р·РјРµСЂ РєР°СЂС‚С‹ С€РёСЂРёРЅР° 
 
 
 sf::String TileMap[HEIGHT_MAP] = {
@@ -31,17 +31,17 @@ sf::String TileMap[HEIGHT_MAP] = {
 	"0000000000000000000000000000000000000000",
 };
 
-void randomMapGenerate() // рандомно лужицы
+void randomMapGenerate() // СЂР°РЅРґРѕРјРЅРѕ Р»СѓР¶РёС†С‹
 {
-	int randomElementX = 0; // случайный элемент по горизонтали
-	int randomElementY = 0;//случайный элемент по вертикали
-	srand(time(0)); // рандом
-	int countStone = 1; //количествно луж
+	int randomElementX = 0; // СЃР»СѓС‡Р°Р№РЅС‹Р№ СЌР»РµРјРµРЅС‚ РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё
+	int randomElementY = 0;//СЃР»СѓС‡Р°Р№РЅС‹Р№ СЌР»РµРјРµРЅС‚ РїРѕ РІРµСЂС‚РёРєР°Р»Рё
+	srand(time(0)); // СЂР°РЅРґРѕРј
+	int countStone = 1; //РєРѕР»РёС‡РµСЃС‚РІРЅРѕ Р»СѓР¶
 
 	while (countStone > 0)
 	{
-		randomElementX = 1 + rand() % (WIDTH_MAP - 1);//рандомное по иксу от 1 до ширины-1 чтобы в стене не появилось
-		randomElementY = 1 + rand() % (HEIGHT_MAP - 1);// тоже по игреку
+		randomElementX = 1 + rand() % (WIDTH_MAP - 1);//СЂР°РЅРґРѕРјРЅРѕРµ РїРѕ РёРєСЃСѓ РѕС‚ 1 РґРѕ С€РёСЂРёРЅС‹-1 С‡С‚РѕР±С‹ РІ СЃС‚РµРЅРµ РЅРµ РїРѕСЏРІРёР»РѕСЃСЊ
+		randomElementY = 1 + rand() % (HEIGHT_MAP - 1);// С‚РѕР¶Рµ РїРѕ РёРіСЂРµРєСѓ
 
 		if (TileMap[randomElementY][randomElementX] == ' ')
 		{
@@ -52,12 +52,12 @@ void randomMapGenerate() // рандомно лужицы
 
 		
 	}
-	int countUrod = 1; //количествно луж
+	int countUrod = 1; //РєРѕР»РёС‡РµСЃС‚РІРЅРѕ Р»СѓР¶
 
 	while (countUrod > 0)
 	{
-		randomElementX = 1 + rand() % (WIDTH_MAP - 1);//рандомное по иксу от 1 до ширины-1 чтобы в стене не появилось
-		randomElementY = 1 + rand() % (HEIGHT_MAP - 1);// тоже по игреку
+		randomElementX = 1 + rand() % (WIDTH_MAP - 1);//СЂР°РЅРґРѕРјРЅРѕРµ РїРѕ РёРєСЃСѓ РѕС‚ 1 РґРѕ С€РёСЂРёРЅС‹-1 С‡С‚РѕР±С‹ РІ СЃС‚РµРЅРµ РЅРµ РїРѕСЏРІРёР»РѕСЃСЊ
+		randomElementY = 1 + rand() % (HEIGHT_MAP - 1);// С‚РѕР¶Рµ РїРѕ РёРіСЂРµРєСѓ
 
 		if (TileMap[randomElementY][randomElementX] == ' ')
 		{
@@ -68,12 +68,12 @@ void randomMapGenerate() // рандомно лужицы
 
 
 	}
-	int countHealth = 1; //количествно луж
+	int countHealth = 1; //РєРѕР»РёС‡РµСЃС‚РІРЅРѕ Р»СѓР¶
 
 	while (countHealth > 0)
 	{
-		randomElementX = 1 + rand() % (WIDTH_MAP - 1);//рандомное по иксу от 1 до ширины-1 чтобы в стене не появилось
-		randomElementY = 1 + rand() % (HEIGHT_MAP - 1);// тоже по игреку
+		randomElementX = 1 + rand() % (WIDTH_MAP - 1);//СЂР°РЅРґРѕРјРЅРѕРµ РїРѕ РёРєСЃСѓ РѕС‚ 1 РґРѕ С€РёСЂРёРЅС‹-1 С‡С‚РѕР±С‹ РІ СЃС‚РµРЅРµ РЅРµ РїРѕСЏРІРёР»РѕСЃСЊ
+		randomElementY = 1 + rand() % (HEIGHT_MAP - 1);// С‚РѕР¶Рµ РїРѕ РёРіСЂРµРєСѓ
 
 		if (TileMap[randomElementY][randomElementX] == ' ')
 		{
