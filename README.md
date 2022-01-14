@@ -1,2 +1,7 @@
-# my_game
-Игра на языке C++
+## Simple game
+
+##### Programming language:
+- C++
+
+##### Game screenshot:
+![alt text](images/game.jpg)
